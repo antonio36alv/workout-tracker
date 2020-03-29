@@ -14,23 +14,20 @@ const WorkoutSchema = new Schema({
                 type: String,
                 required: true
             },
-            duration: {
-                type: Number,
-                required: true
-            },
             distance: Number,
             weight: Number,
             sets: Number,
-            reps: Number
+            reps: Number,
+            duration: Number
         }
     ]
 })
 
-WorkoutSchema.methods.setTotalDuration = () => {
-console.log("singing im still wrong")
-    for(e of exercises) this.totalDuration =+ e.duration
-    return this.totalDuration
-}
+// WorkoutSchema.methods.setTotalDuration = function() {
+// return "awkward"
+//     // for(e of exercises) this.totalDuration =+ e.duration
+//     // return this.totalDuration
+// }
 
 const Workout = mongoose.model("Workout", WorkoutSchema)
 
