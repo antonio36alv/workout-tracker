@@ -1,5 +1,10 @@
-#Package-lock.json
+# Personally added
 package-lock.json
+INSTRUCTION.md
+MongoDBDeploy.md
+MongoDBHerokuDeploy.md
+
+
 # Logs
 logs
 *.log

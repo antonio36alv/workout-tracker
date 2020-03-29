@@ -94,7 +94,8 @@ function validateInputs() {
     addButton.setAttribute("disabled", true);
   }
 }
-
+//ADD BUTTON EVENTS FUNCTION
+/******************************************************* */
 async function handleFormSubmit(event) {
   event.preventDefault();
 
@@ -113,6 +114,7 @@ async function handleFormSubmit(event) {
     workoutData.reps = Number(repsInput.value.trim());
     workoutData.duration = Number(resistanceDurationInput.value.trim());
   }
+/******************************************************* */
 
   await API.addExercise(workoutData);
   clearInputs();
