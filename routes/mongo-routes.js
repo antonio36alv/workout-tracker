@@ -1,17 +1,12 @@
 const mongoose = require("mongoose")
 
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true})
-
 const db = require("../models")
 module.exports = app => {
 
     app.get("/api/workouts", (req, res) => {
         //getLastWorkout()
 
-        db.Workout.find({}).limit(1).sort("-day").then( data => {
-
-            res.json(data)
-        })
+        db.Workout.find({}).limit(1).sort("-day").then( data => res.json(data))
     })
  
     app.put("/api/workouts/:id", (req, res) => {
